@@ -19,18 +19,25 @@
   <body>
     <div class="main-game">
       <canvas id="game-canvas" width="500" height="500"></canvas>
+      <div id="hud" class="text-hud hud-info"></div>
+      <div id="game-status" class="game-status hud-info"></div>
+      <div id="player-info" class="player-info hud-info">Lives: 3</div>
     </div>
     <div style="display:none;">
-      <img id="source" src="img/spaceship.png"
-           width="72" height="72">
-      <img id="source-boost" src="img/spaceshipBoost.png"
-          width="72" height="72">
+      <img  id="source"
+            src="img/spaceship.png"
+            width="72"
+            height="72">
+      <img  id="source-boost"
+            src="img/spaceshipBoost.png"
+            width="72"
+            height="72">
     </div>
-
 
     <script>
       var canvasEl = document.getElementsByTagName("canvas")[0];
       new Asteroids.GameView(new Asteroids.Game, canvasEl).start(canvasEl);
     </script>
+
   </body>
 </html>
