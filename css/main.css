@@ -24,24 +24,33 @@ body {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 #hud {
   left: 0;
   top: 0;
   padding: 20px;
-
 }
 
-#game-status {
+#level {
   left: 50%;
-  top: 50%;
   transform: translateX(-50%);
+  top: 0;
+  display: block;
+  text-align: center;
+  padding: 20px;
 }
 
 #player-info {
   top: 0;
   left: 80%;
   padding: 20px;
+}
+
+#game-status {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
 }
