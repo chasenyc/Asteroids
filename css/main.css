@@ -3,6 +3,14 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .main-game {
   width: max-content;
   height: max-content;
@@ -49,6 +57,7 @@ body {
 }
 
 #game-status {
+  text-align: center;
   left: 50%;
   top: 50%;
   transform: translateX(-50%);
