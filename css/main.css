@@ -1,6 +1,7 @@
 body {
   background: #E0E4CC;
   font-family: sans-serif;
+  color: #fff;
 }
 
 header {
@@ -19,6 +20,8 @@ header {
 }
 
 #game-canvas {
+
+  background-image: url("../img/space.jpg");
   border: 1px solid #A7DBD8;
 }
 
