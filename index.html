@@ -23,7 +23,7 @@
       </header>
     </div>
     <div class="main-game">
-      <canvas id="game-canvas" width="500" height="500"></canvas>
+      <canvas id="game-canvas"></canvas>
       <div id="hud" class="text-hud hud-info"></div>
       <div id="level" class="level hud-info"></div>
       <div id="player-info" class="player-info hud-info"></div>
@@ -40,7 +40,8 @@
 
     <script>
       var canvasEl = document.getElementsByTagName("canvas")[0];
-      new Asteroids.GameView(new Asteroids.Game, canvasEl).start(canvasEl);
+      var ctx = canvasEl.getContext("2d");
+      new Asteroids.GameView(new Asteroids.Game, ctx).start();
     </script>
 
   </body>

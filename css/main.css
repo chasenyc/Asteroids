@@ -10,6 +10,7 @@ header {
   padding: 10px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #000;
 }
 
 .main-game {
@@ -53,10 +54,12 @@ header {
   padding: 20px;
 }
 
-#player-info {
+.player-info {
   top: 0;
-  left: 80%;
+  left: 100%;
+  transform: translateX(-100%);
   padding: 20px;
+  white-space: nowrap;
 }
 
 #game-status {
