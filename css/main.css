@@ -70,3 +70,12 @@ header {
   font-weight: 700;
   white-space: pre;
 }
+
+p {
+  margin: 0;
+}
+
+.controls-display {
+  color: black;
+  text-align: center;
+}
