@@ -10,7 +10,6 @@ describe("Util#inherits", function () {
   });
 });
 
-
 describe("Util#randomVel", function () {
   it("should return random velocities each time", function () {
     var velOne = Asteroids.Util.randomVel(1,0);
