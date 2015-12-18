@@ -17,3 +17,15 @@ describe("Util#randomVel", function () {
     expect(velOne[0] !== velTwo[0] && velOne[1] !== velTwo[1]).toBe(true);
   });
 });
+
+describe("Util#distance", function () {
+  it("should return correct distance between two coordinates", function () {
+    var posOne = [0,0];
+    var posTwo = [3,0];
+    var distance = Asteroids.Util.distance(posOne, posTwo);
+    var posThree = [0,0];
+    var posFour = [3,4];
+    var distanceTwo = Asteroids.Util.distance(posThree, posFour);
+    expect(distanceTwo).toBe(5);
+  });
+});
