@@ -45,4 +45,17 @@ describe("Game", function () {
     expect(firstAsteroid.move).toHaveBeenCalled();
     expect(secondAsteroid.move).toHaveBeenCalled();
   });
+
+  it("Game#wrap takes an object and wraps it if necessary", function () {
+    game.asteroids = game.addAsteroids();
+    var firstAsteroid = game.asteroids[0];
+    var secondAsteroid = new Asteroids.Asteroid (game.randomPosition(), game);
+    secondAsteroid.pos = secondAsteroid.pos[0] + Asteroids.Game.DIM_X;
+    var firstOrigX = firstAsteroid.pos[0] + 0;
+    var secondOrigX = secondAsteroid.pos[0] + 0;
+    game.wrap(firstAsteroid);
+    game.wrap(secondAsteroid);
+    expect(firstOrigX === firstAsteroid.pos[0]).toBe(true);
+    expect(secondOrigX === secondAsteroid.pos[0]).toBe(false);
+  });
 });
