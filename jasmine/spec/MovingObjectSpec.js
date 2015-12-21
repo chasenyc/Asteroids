@@ -1,4 +1,4 @@
-describe("movingObject", function () {
+describe("MovingObject", function () {
   var objectOne = new Asteroids.MovingObject ();
   objectOne.radius = 2;
   objectOne.pos = [0,0];
