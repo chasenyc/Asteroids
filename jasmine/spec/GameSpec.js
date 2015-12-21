@@ -33,4 +33,16 @@ describe("Game", function () {
     var posTwo = game.randomPosition();
     expect(posOne !== posTwo).toBe(true);
   });
+
+  it("Game#moveObjects iterates through asteroids", function () {
+    game.asteroids = game.addAsteroids();
+    var firstAsteroid = game.asteroids[0];
+    var secondAsteroid = new Asteroids.Asteroid (game.randomPosition(), game);
+    game.addAsteroid(secondAsteroid);
+    spyOn(firstAsteroid, 'move');
+    spyOn(secondAsteroid, 'move');
+    game.moveObjects();
+    expect(firstAsteroid.move).toHaveBeenCalled();
+    expect(secondAsteroid.move).toHaveBeenCalled();
+  });
 });
