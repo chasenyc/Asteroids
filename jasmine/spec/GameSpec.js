@@ -58,4 +58,23 @@ describe("Game", function () {
     expect(firstOrigX === firstAsteroid.pos[0]).toBe(true);
     expect(secondOrigX === secondAsteroid.pos[0]).toBe(false);
   });
+
+  it("Game#needsWrapping return true or false if an object needs wrapping, does not check for if an object is wrappable", function () {
+    game.asteroids = game.addAsteroids();
+    var firstAsteroid = game.asteroids[0];
+    firstAsteroid.pos[0] += Asteroids.Game.DIM_X;
+    game.bullets = [];
+    var bulletOpts = {
+      pos: [1,0],
+      vel: [0.5, 0.5],
+      game: game
+    };
+    expect(game.needsWrapping(firstAsteroid.pos)).toBe(true);
+  });
+
+  it("Game#wrapNum takes in a number and max width and returns wrappedNum", function () {
+    expect(game.wrapNum(510, 500)).toBe(10);
+    expect(game.wrapNum(-100,500)).toBe(400);
+  });
+
 });
